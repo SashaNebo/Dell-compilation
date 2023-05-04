@@ -1,0 +1,223 @@
+@import './fonts.scss';
+
+.footer {
+  height: 438px;
+  position: relative;
+
+  &::before {
+    width: 767px;
+    height: 202px;
+    content: "";
+    position: absolute;
+    top: 133px;
+    right: -16%;
+    z-index: -1;
+    background: url('../images/DELL-m.svg') no-repeat;
+  }
+
+  // &-content {}
+
+  &-top {
+    height: 299px;
+    border-bottom: 1px solid #E5E5E5;
+
+    &__logo {
+      padding: 89px 190px 0 0;
+
+      img {
+        width: 112px;
+        height: 112px;
+      }
+    }
+
+    &-blocks {
+      display: flex;
+      justify-content: space-between;
+      width: 908px;
+      padding-top: 60px;
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 29px;
+        color: #292D32;
+        line-height: 19px;
+        text-align: left;
+        padding-bottom: 5px;
+      }
+
+      &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: left;
+        color: #292D32;
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    &-info {
+      width: 1153px;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 0 40px 0;
+
+      &__block {
+
+        &-title {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 133.69%;
+          color: #838383;
+        }
+
+        &-text {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 150%;
+          color: #292D32;
+          padding-top: 11px;
+        }
+      }
+
+      &__socials {
+        display: flex;
+        column-gap: 18.3px;
+        padding-top: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    height: 755px;
+
+    &::before {
+      width: 293px;
+      height: 77px;
+      right: -10%;
+      top: 111%;
+      background: url('../images/Dell-mobile.svg') no-repeat;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 22px 30px 16px;
+    }
+
+    &-top {
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__logo {
+        padding: 0;
+
+        img {
+          width: 70px;
+          height: 71px;
+        }
+      }
+
+      &-blocks {
+        width: auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 50px;
+        padding-bottom: 30px;
+      }
+
+      &-block {
+        width: 141px;
+
+        &__title {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          color: #292D32;
+        }
+
+        &__text {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 18px;
+          display: flex;
+          align-items: center;
+          color: #292D32
+        }
+      }
+    }
+
+    &-bottom {
+      height: auto;
+      padding: 30px 0 30px 0;
+      flex-direction: column;
+
+      &-info {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        row-gap: 20px;
+
+        &__block {
+
+          &-title {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 133.69%;
+            color: #838383;
+          }
+
+          &__text {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 150%;
+            color: #292D32;
+          }
+        }
+
+        &__socials {
+          padding-top: 30px;
+          column-gap: 30px;
+
+          a {
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

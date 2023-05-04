@@ -1,0 +1,277 @@
+@import './fonts.scss';
+
+.intro {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 1411px;
+    height: 683px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background: #F2F2F2;
+  }
+
+  &::after {
+    content: "";
+    width: 509px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background: url('../images/prev.png') no-repeat;
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    height: 683px;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 97.4px;
+      z-index: -1;
+      background: url('../images/Dell.png') no-repeat;
+    }
+
+    &::after {
+      content: "";
+      width: 1920px;
+      height: 684px;
+      position: absolute;
+      z-index: -4;
+      background: #F9F9F9;
+    }
+  }
+
+  &-info {
+    padding-left: 130px;
+    width: 530px;
+    padding-top: 253px;
+
+    &::before {
+      content: "Scroll to catalog";
+      position: absolute;
+      z-index: 1;
+      bottom: 269.5px;
+      left: -50px;
+      transform: rotate(-90deg);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: #838383;
+    }
+
+    &::after {
+      width: 25px;
+      height: 38.5px;
+      content: "";
+      position: absolute;
+      bottom: 158px;
+      left: -6px;
+      z-index: 1;
+      background: url('../images/scroll.svg');
+      cursor: pointer;
+    }
+
+    &__text {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+      color: #838383;
+    }
+
+    &__title {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 59px;
+      color: #292D32;
+      padding-top: 15px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &-slider {
+    padding-top: 74px;
+
+    &__list {
+      width: 69px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 160px;
+      right: 280px;
+
+      &-item {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #D0D0D0;
+
+        &.active {
+          width: 9px;
+          height: 9px;
+          background: #000000;
+        }
+      }
+    }
+  }
+
+
+  &-controlls {
+    width: 181px;
+    height: 96px;
+    padding-left: 100px;
+
+    &__subtitle {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 130%;
+      color: #292D32;
+    }
+
+    &__btn {
+      padding-top: 82px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .intro {
+    &::after {
+      display: none;
+    }
+
+    &-content {
+      height: 789px;
+      flex-direction: column;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 18px;
+        left: 32px;
+        z-index: -1;
+        background: url('../images/Dell-mobile.svg') no-repeat;
+      }
+    }
+
+    &-info {
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      padding: 80px 0 0 15px;
+
+      &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 133.69%;
+        color: #838383;
+      }
+
+      &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        color: #292D32;
+        padding: 5px 260px 28px 0;
+      }
+
+      button {
+        width: 45px;
+        height: 45px;
+      }
+
+      label {
+        font-size: 16px;
+      }
+    }
+
+    &-slider {
+      position: relative;
+      justify-content: normal;
+      width: 375px;
+      flex-direction: column;
+      padding-top: 16px;
+
+      &__list {
+        bottom: 40%;
+        right: 30%;
+      }
+    }
+
+    &-controlls {
+      position: relative;
+      width: 376px;
+      height: 196px;
+      padding: 0;
+      background: #F9F9F9;
+
+
+      &::before {
+        width: 252px;
+        height: 166px;
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 0;
+        z-index: 2;
+        background: url('../images/prev-mob.png');
+
+      }
+
+      &__btn {
+        width: 64px;
+        height: 14px;
+        padding: 0;
+        position: absolute;
+        bottom: 110%;
+        right: 8%;
+      }
+
+      &__subtitle {
+        width: 136px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #292D32;
+        text-align: left;
+        padding: 59px 0 59px 15px;
+      }
+    }
+  }
+
+  .slider {
+
+    img {
+      width: 327px;
+      height: 325px;
+    }
+  }
+}

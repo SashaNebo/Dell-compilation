@@ -1,0 +1,273 @@
+@import './fonts.scss';
+
+.benefit {
+  height: 962px;
+  position: relative;
+
+  &::before {
+    width: 883px;
+    height: 319px;
+    content: "";
+    position: absolute;
+    top: 152px;
+    left: 0;
+    z-index: -1;
+    background: url('../images/best\ quality.png');
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1920px;
+    height: 962px;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background: #F2F2F2;
+  }
+
+  &-intro {
+    padding-top: 87px;
+  }
+
+  &-img {
+    width: 710px;
+    height: 492px;
+    position: relative;
+
+    &::before {
+      width: 874px;
+      height: 492px;
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: -80px;
+      z-index: -1;
+      background: url('../images/benefit.png');
+    }
+  }
+
+  &-info {
+    padding-right: 20px;
+
+    &__title {
+      width: 492px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 50px;
+      color: #292D32;
+      padding-top: 66px;
+    }
+
+    &__text {
+      width: 518px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      color: #838383;
+      padding-top: 37px;
+    }
+
+    &__button {
+      margin-top: 41px;
+    }
+  }
+
+  &-blocks {
+    justify-content: space-between;
+    padding-top: 48px;
+  }
+
+  &-block {
+    width: 330px;
+    height: 289px;
+    position: relative;
+    background: #292D32;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::before {
+      width: 142px;
+      height: 94px;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background: url("../images/benefit-v.svg");
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      background: #343A41;
+      border-radius: 10px;
+      margin: 30px 0 0 30px;
+    }
+
+    &__title {
+      font-family: 'Euclid Circular A';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px;
+      color: #fff;
+      padding: 0 10px 0 30px;
+    }
+
+    &__text {
+      font-family: 'Euclid Circular A';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      color: #B7B7B7;
+      padding: 0 25px 35px 30px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+
+  .benefit {
+    height: 1546px;
+
+    &::before {
+      width: 335px;
+      height: 121px;
+      background: url('../images/best\ quality-mob.svg') no-repeat;
+      top: 39.5%;
+    }
+
+    &-intro {
+      flex-direction: column-reverse;
+      padding: 101px 15px 0 15px;
+    }
+
+    &-img {
+      width: 345px;
+      height: 194px;
+
+      &::before {
+        width: 345px;
+        height: 194px;
+        top: -30%;
+        left: 20%;
+        background: url('../images/benefit-mob.png') no-repeat;
+      }
+    }
+
+    &-info {
+
+      button {
+        width: 45px;
+        height: 45px;
+      }
+
+      label {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 30px;
+        color: #292D32;
+      }
+
+      &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 50px;
+        color: #292D32;
+        padding-top: 0;
+      }
+
+      &__text {
+        width: auto;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+        color: #838383;
+        padding-top: 20px;
+      }
+    }
+
+    &-blocks {
+      flex-direction: column;
+      padding: 0 15px 0 15px;
+      row-gap: 17px;
+    }
+
+    &-block {
+      width: 345px;
+      height: 214px;
+      justify-content: normal;
+      padding-left: 15px;
+
+      &::before {
+        width: 121px;
+        height: 67px;
+        background: url('../images/benefit-v-mob.svg') no-repeat;
+      }
+
+      &__icon {
+        width: 50px;
+        height: 50px;
+        margin: 15px 0 15px 0;
+
+        .block-i1 {
+          width: 31px;
+          height: 31px;
+        }
+
+        .block-i2 {
+          width: 30px;
+          height: 30px;
+        }
+
+        .block-i3 {
+          width: 29px;
+          height: 29px;
+        }
+
+        .block-i4 {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &__title {
+        font-family: 'Euclid Circular A';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        color: #FFFFFF;
+        padding: 0;
+      }
+
+      &__text {
+        font-family: 'Euclid Circular A';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        color: #B7B7B7;
+        padding: 10px 0 10px 0;
+        width: 275px;
+      }
+    }
+  }
+}
